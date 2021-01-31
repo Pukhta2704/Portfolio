@@ -1,0 +1,99 @@
+.main-projects {
+	background: linear-gradient(to right, rgba($primary-color, 0.75), rgba($primary-color, 0.75)),
+		url('../Capture.JPG') center top;
+	background-size: cover;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	.footer {
+		display: none;
+	}
+	h1 {
+		font-size: 4rem;
+		color: $secondary-color;
+		padding-top: 2rem;
+	}
+}
+.projects {
+	width: 80%;
+	margin: auto;
+	.project {
+		width: 100%;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+		img {
+			width: 50%;
+			margin: auto;
+			@include media-md {
+				width: 75%;
+			}
+		}
+		h3 {
+			font-size: 2rem;
+			cursor: pointer;
+			@include transition-ease;
+			&:hover {
+				color: $secondary-color;
+			}
+			@include media-xs {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+.projects-model {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background: #272727;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transform: translateY(-100vh);
+	@include transition-ease;
+	
+	a{
+		text-align: center;
+	
+		@include transition-ease;
+		&:hover{
+			color: $secondary-color;
+		}
+	}
+	p {
+		width: 70%;
+		@include media-sm {
+			width: 100%;
+		}
+	}
+	img {
+		width: 50%;
+		@include media-sm {
+			width: 75%;
+		}
+	}
+	.model-closer-icon {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		cursor: pointer;
+		z-index: 5;
+		@include transition-ease;
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+	&.model-open {
+		overflow: auto;
+		transform: translateY(0);
+	}
+}
